@@ -34,6 +34,3 @@ const editarAluno = (matricula,turma) => (novosDados) => {
 }
 
 const turma7 = editarAluno(20240001, turma6)({idade: 72}); // testando função editar aluno
-
-
-
