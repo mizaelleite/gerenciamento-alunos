@@ -16,11 +16,11 @@ const listarAlunos = (lista) => lista.filter((aluno) => aluno) // tarefa 4
 
 const buscarPorCurso = (curso) => (lista) => lista.filter((aluno) => aluno.curso === curso) // tarefa 5
 
-const removerAluno = (aluno) => (lista) => lista.filter((aluno) => aluno.nome !== aluno) // tarefa 6
+const removerAluno = (nome) => (lista) => lista.filter((aluno) => aluno.nome !== nome) // tarefa 6
 
-const ordernar = (lista) => [...lista].sort((a, b) => a.matricula - b.matricula) // tarefa 7
+const ordenar = (lista) => [...lista].sort((a, b) => a.matricula - b.matricula) // tarefa 7
 
-const contagemAlunoporCurso = (lista) => [
+const contagemAlunoPorCurso = (lista) => [
     { Ciência_da_Computação: `${lista.filter((aluno) => aluno.curso === 'CC').length} aluno(s)` },  // tarefa 8
     { Engenharia_da_Computação: `${lista.filter((aluno) => aluno.curso === 'EC').length} aluno(s)` },
     { Sistemas_de_Informação: `${lista.filter((aluno) => aluno.curso === 'SI').length} aluno(s)` }
@@ -34,5 +34,3 @@ const editarAluno = (matricula,turma) => (novosDados) => {
 }
 
 const turma7 = editarAluno(20240001, turma6)({idade: 72}); // testando função editar aluno
-
-console.log(turma7) 
