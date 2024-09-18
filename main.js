@@ -7,7 +7,7 @@ const adicionarAluno = (turma, nome, idade, matricula, curso) =>  // tarefa 3
 
 const turma1 = Object.freeze(adicionarAluno(turma, 'João', 20, 20240003, 'CC'))
 const turma2 = Object.freeze(adicionarAluno(turma1, 'Fagundes', 21, 20240001, 'CC'))
-const turma3 = Object.freeze(adicionarAluno(turma2, 'Ricardo', 20, 20240004, 'EC'))
+const turma3 = Object.freeze(adicionarAluno(turma2, 'Ricardo', 20, 20240004, 'EC'))   // testando função adicionaraluno
 const turma4 = Object.freeze(adicionarAluno(turma3, 'Felipe', 19, 20240002, 'EC'))
 const turma5 = Object.freeze(adicionarAluno(turma4, 'Pedro', 17, 20240005, 'SI'))
 const turma6 = Object.freeze(adicionarAluno(turma5, 'Maria', 17, 20240006, 'SI'))
