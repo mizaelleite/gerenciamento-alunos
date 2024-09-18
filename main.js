@@ -27,10 +27,15 @@ const contagemAlunoPorCurso = (lista) => [
 ];
 
 
-const editarAluno = (matricula,turma) => (novosDados) => {
+const editarAluno = (matricula,turma) => (x,y,z,w) => {
+
+    const l1 = {nome: x, idade: y, matricula: z, curso: w}
+
     return [...turma].map(aluno => 
-        aluno.matricula === matricula ? { ...aluno, ...novosDados } : aluno              // tarefa 9
+        aluno.matricula === matricula ? { ...aluno, ...l1} : aluno              // tarefa 9
     )
 }
 
-const result = editarAluno(20240001,turma6)({nome:'Guilherme', idade: 17, matricula: 20240030, curso: 'SI'}) // teste função editarAluno
+const result = editarAluno(20240001,turma6)('Guilherme', 17, 20240030, 'CC') // teste função editarAluno
+
+console.log(result)
