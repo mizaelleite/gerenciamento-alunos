@@ -12,18 +12,18 @@ const turma4 = adicionarAluno(turma3, 'Felipe', 19, 20240002, 'EC')
 const turma5 = adicionarAluno(turma4, 'Pedro', 17, 20240005, 'CC')
 const turma6 = adicionarAluno(turma5, 'Maria', 17, 20240006, 'SI')
 
-const listarAlunos = (lista) => lista.filter((elemento) => elemento) // tarefa 4
+const listarAlunos = (lista) => lista.filter((aluno) => aluno) // tarefa 4
 
-const buscarPorCurso = (curso) => (lista) => lista.filter((elemento) => elemento.curso === curso) // tarefa 5
+const buscarPorCurso = (curso) => (lista) => lista.filter((aluno) => aluno.curso === curso) // tarefa 5
 
-const removerAluno = (aluno) => (lista) => lista.filter((elemento) => elemento.nome !== aluno) // tarefa 6
+const removerAluno = (aluno) => (lista) => lista.filter((aluno) => aluno.nome !== aluno) // tarefa 6
 
 const ordernar = (lista) => [...lista].sort((a, b) => a.matricula - b.matricula) // tarefa 7
 
 const contagemAlunoporCurso = (lista) => [
-    { Ciência_da_Computação: `${lista.filter((elemento) => elemento.curso === 'CC').length} aluno(s)` },  // tarefa 8
-    { Engenharia_da_Computação: `${lista.filter((elemento) => elemento.curso === 'EC').length} aluno(s)` },
-    { Sistemas_de_Informação: `${lista.filter((elemento) => elemento.curso === 'SI').length} aluno(s)` }
+    { Ciência_da_Computação: `${lista.filter((aluno) => aluno.curso === 'CC').length} aluno(s)` },  // tarefa 8
+    { Engenharia_da_Computação: `${lista.filter((aluno) => aluno.curso === 'EC').length} aluno(s)` },
+    { Sistemas_de_Informação: `${lista.filter((aluno) => aluno.curso === 'SI').length} aluno(s)` }
 ];
 
 
@@ -35,4 +35,4 @@ const editarAluno = (matricula,turma) => (novosDados) => {
 
 const turma7 = editarAluno(20240001, turma6)({idade: 72}); // testando função editar aluno
 
-console.log(turma7) // testando commit
+console.log(turma7) 
